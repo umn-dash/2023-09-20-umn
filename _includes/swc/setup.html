@@ -4,9 +4,15 @@
 {% endunless %}
 
 {% include install_instructions/shell.html %}
+{% include install_instructions/sql.html %}
+{% include install_instructions/latis-jupyterhub.html %}
+
+{% comment %}
 {% include install_instructions/git.html %}
 {% include install_instructions/editor.html %}
+{% endcomment %}
 
+{% comment %}
 {% if site.flavor == "r" %}
 {% include install_instructions/r.html %}
 {% elsif site.flavor == "python" %}
@@ -17,6 +23,9 @@
 {% else %}
 {% include warning-flavor.html %}
 {% endif %}
+{% endcomment %}
+
+
 
 {% comment %}
 The following setup instructions are commented out because Carpentries workshops
